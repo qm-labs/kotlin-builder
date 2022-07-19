@@ -15,8 +15,7 @@ allprojects {
     afterEvaluate {
         tasks.withType<KotlinCompile>().all {
             kotlinOptions {
-                jvmTarget = "11"
-                freeCompilerArgs = freeCompilerArgs + listOf("-Xcontext-receivers")
+                jvmTarget = "1.8"
                 allWarningsAsErrors = true
                 suppressWarnings = false
                 kotlin.sourceSets.main {
