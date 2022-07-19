@@ -1,0 +1,28 @@
+[versions]
+kotlin="1.7.0"
+kotlinter="3.8.0"
+kotest="5.3.1"
+kotestPlugin="0.3.8"
+junit="5.6.1"
+mockk="1.12.1"
+ksp="1.7.0-1.0.6"
+
+[libraries]
+junit-jupiter-api = {group="org.junit.jupiter",name="junit-jupiter-api", version.ref="junit"}
+junit-jupiter-core = {group="org.junit.jupiter",name="junit-jupiter", version.ref="junit"}
+junit-jupiter-params = {group="org.junit.jupiter",name="junit-jupiter-params", version.ref="junit"}
+kotest-assertions-core = {group="io.kotest",name="kotest-assertions-core", version.ref="kotest"}
+kotest-framework-engine-jvm = {group="io.kotest",name="kotest-framework-engine-jvm", version.ref="kotest"}
+kotest-runner-junit5 = {group="io.kotest",name="kotest-runner-junit5", version.ref="kotest"}
+mockk = {group="io.mockk",name="mockk", version.ref="mockk"}
+kotlin-reflect = {group="org.jetbrains.kotlin", name="kotlin-reflect", version.ref="kotlin"}
+
+[bundles]
+tests = ["junit-jupiter-api", "junit-jupiter-core", "junit-jupiter-params", "mockk"]
+kotests = ["kotest-assertions-core", "kotest-framework-engine-jvm", "mockk", "kotest-runner-junit5"]
+
+[plugins]
+kotlinter = {id="org.jmailen.kotlinter", version.ref="kotlinter"}
+kotlin-jvm = {id="org.jetbrains.kotlin.jvm", version.ref="kotlin"}
+kotest = {id="io.kotest", version.ref="kotestPlugin"}
+ksp = {id="com.google.devtools.ksp", version.ref="ksp"}
